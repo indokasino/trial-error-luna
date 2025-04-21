@@ -1,0 +1,351 @@
+/* Additional styles for history.php and other admin pages */
+
+/* Critical inline styles for history page */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f5f7fa;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Admin Header Styles */
+.admin-header {
+    background-color: #2c3e50;
+    color: #fff;
+    padding: 10px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.admin-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+}
+
+.logo a {
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+}
+
+.main-nav {
+    margin-left: 30px;
+}
+
+.main-nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.main-nav ul li {
+    margin-right: 20px;
+}
+
+.main-nav ul li a {
+    color: #fff;
+    opacity: 0.8;
+    text-decoration: none;
+    padding: 8px 0;
+    display: block;
+    position: relative;
+}
+
+.main-nav ul li a:hover, .main-nav ul li a.active {
+    opacity: 1;
+}
+
+.main-nav ul li a.active:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #3498db;
+}
+
+.user-menu {
+    display: flex;
+    align-items: center;
+}
+
+.username {
+    margin-right: 15px;
+    font-weight: 500;
+    color: #fff;
+}
+
+.logout-link {
+    color: #fff;
+    opacity: 0.8;
+    text-decoration: none;
+}
+
+/* Page Header */
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 25px 0;
+}
+
+.page-header h1 {
+    font-size: 24px;
+    color: #2c3e50;
+    margin: 0;
+}
+
+/* Filter Form */
+.filter-bar {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.filter-form {
+    width: 100%;
+}
+
+.filter-form-row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -10px;
+}
+
+.filter-group {
+    padding: 0 10px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+}
+
+.filter-group.col-md-3 {
+    width: 25%;
+}
+
+.filter-group.col-md-2 {
+    width: 20%;
+}
+
+.filter-group.col-md-1 {
+    width: 10%;
+}
+
+.filter-group label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 500;
+    color: #555;
+}
+
+.filter-group input, .filter-group select {
+    width: 100%;
+    padding: 8px 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+.btn {
+    padding: 8px 15px;
+    border-radius: 4px;
+    font-weight: 500;
+    cursor: pointer;
+    border: none;
+    text-align: center;
+    display: inline-block;
+    transition: background-color 0.2s;
+}
+
+.btn-secondary {
+    background-color: #f1f1f1;
+    color: #333;
+}
+
+.btn-secondary:hover {
+    background-color: #e1e1e1;
+}
+
+.filter-btn-wrapper {
+    display: flex;
+    align-items: flex-end;
+    height: 100%;
+}
+
+.btn-block {
+    width: 100%;
+}
+
+/* Data summary and status display */
+.data-summary {
+    margin: 20px 0;
+    color: #555;
+    font-size: 13px;
+}
+
+.no-records {
+    background-color: #f9f9f9;
+    padding: 30px;
+    text-align: center;
+    border-radius: 5px;
+    color: #777;
+}
+
+/* Log Entry Styles */
+.log-entries {
+    margin-bottom: 30px;
+}
+
+.log-entry {
+    background-color: #fff;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.log-header {
+    background-color: #f9f9f9;
+    padding: 12px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+}
+
+.meta-info {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.datetime {
+    color: #777;
+    font-size: 13px;
+    margin-right: 10px;
+}
+
+.source-badge {
+    padding: 3px 8px;
+    border-radius: 12px;
+    font-size: 12px;
+    margin-right: 10px;
+}
+
+.source-manual {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.source-gpt {
+    background-color: #e1f0fa;
+    color: #3498db;
+}
+
+.score-badge {
+    background-color: #e1f0fa;
+    color: #3498db;
+    padding: 3px 8px;
+    border-radius: 12px;
+    font-size: 12px;
+    margin-right: 10px;
+}
+
+.ip-address {
+    color: #777;
+    font-size: 13px;
+}
+
+.log-body {
+    padding: 15px;
+}
+
+.message {
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.user-message {
+    background-color: #f5f5f5;
+}
+
+.ai-message {
+    background-color: #e1f0fa;
+}
+
+.message-header {
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: #555;
+}
+
+.message-content {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    line-height: 1.6;
+}
+
+.feedback-section {
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #fff3cd;
+    border-radius: 5px;
+}
+
+.feedback-header {
+    font-weight: 600;
+    color: #856404;
+    margin-bottom: 5px;
+}
+
+.feedback-content {
+    color: #856404;
+    font-size: 13px;
+}
+
+/* Button styles */
+.btn-sm {
+    padding: 5px 10px;
+    font-size: 12px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .filter-group {
+        width: 100% !important;
+    }
+    .filter-btn-wrapper {
+        margin-top: 10px;
+    }
+    .log-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .meta-info {
+        flex-wrap: wrap;
+        margin-bottom: 10px;
+    }
+    .controls {
+        margin-top: 10px;
+    }
+}
